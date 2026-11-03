@@ -24,7 +24,9 @@ jobs:
           cache: npm
       - name: Install locked dependencies
         run: npm ci
-      - name: Test filtering and finance calculations
+      - name: Test catalog, authorization and dealership state
         run: npm test
-      - name: Check types and build production site
+      - name: Check TypeScript
+        run: npm run typecheck
+      - name: Build full-stack production site
         run: npm run build

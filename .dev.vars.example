@@ -1,0 +1,10 @@
+# Copy to .dev.vars for local development only. Never commit real credentials.
+# The supplied portable development sign-in uses this simulated email.
+STAFF_EMAILS=seedy@sites.test
+# Generate a new secret: node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+PRIVATE_API_KEY=replace-with-a-new-random-secret-of-at-least-32-characters
+SITE_URL=http://localhost:5173
+# Enable real hosted checkout only with your own verified merchant account.
+# FLW_SECRET_KEY=
+# FLW_WEBHOOK_SECRET=
+# FLW_WEBHOOK_SIGNATURE_MODE=hmac

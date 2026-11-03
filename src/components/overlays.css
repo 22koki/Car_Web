@@ -197,3 +197,92 @@
   .velocity-modal button { transition: none; }
   .ov-primary:hover { transform: none; }
 }
+
+/* Live stock, persisted enquiries and verified payment states. */
+.vehicle-stock-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; color: #73786b; font-size: 9px; font-weight: 600; letter-spacing: 1px; }
+.vehicle-stock-status { display: inline-flex; align-items: center; gap: 5px; padding: 5px 7px; border: 1px solid #43632530; border-radius: 3px; color: #3d5b22; background: #e6eedc; font-size: 9px; font-weight: 600; line-height: 1; letter-spacing: .7px; text-transform: uppercase; white-space: nowrap; }
+.vehicle-stock-status::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: currentColor; }
+.vehicle-stock-status--reserved { background: #f3e6cb; border-color: #af812c40; color: #765411; }
+.vehicle-stock-status--sold { background: #e4e5e0; border-color: #747a6733; color: #626853; }
+.ov-stock-line { display: flex; align-items: center; flex-wrap: wrap; gap: 11px; margin: -5px 0 22px; color: var(--ov-muted); font-size: 11px; }
+.ov-stock-line .vehicle-stock-status { background: #c3f6730c; color: #c1e986; border-color: #c1e98640; }
+.ov-stock-line .vehicle-stock-status--reserved { color: #e6bf6e; border-color: #e6bf6e40; background: #e6bf6e0a; }
+.ov-stock-line .vehicle-stock-status--sold { color: #b8bdae; border-color: #b8bdae40; background: #b8bdae0a; }
+.ov-demo-tag { color: #e5d69a; font-size: 10px; text-transform: uppercase; letter-spacing: .7px; }
+.ov-capitalize { text-transform: capitalize; }
+.inventory-state { min-height: 285px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 36px 24px; border: 1px solid #a9b09240; border-radius: 8px; background: #ebede4; }
+.inventory-state h3 { font-family: var(--font-display, sans-serif); font-size: clamp(23px, 3vw, 35px); font-weight: 600; margin: 14px 0 10px; letter-spacing: -.7px; }
+.inventory-state p { max-width: 440px; color: #68705b; font-size: 13px; line-height: 1.7; margin: 0 0 20px; }
+.inventory-loading-dot { width: 10px; height: 10px; border: 2px solid #52663c; border-radius: 50%; background: #e1edca; box-shadow: 0 0 0 8px #52663c10; }
+.inventory-refresh-error { font-size: 12px; padding: 15px 18px; border: 1px solid #aa754a44; background: #aa754a08; color: #82552d; border-radius: 5px; }
+.inventory-refresh-error button { text-decoration: underline; text-underline-offset: 3px; background: none; border: 0; padding: 0 4px; color: inherit; font: inherit; cursor: pointer; }
+.ov-form-fields { display: flex; flex-direction: column; gap: 20px; min-width: 0; border: 0; margin: 0; padding: 0; }
+.ov-form select { display: block; width: 100%; min-width: 0; min-height: 46px; padding: 13px 14px; margin-top: 8px; color: var(--ov-text); background: var(--ov-panel); border: 1px solid #ffffff20; border-radius: 7px; font-size: 13px; color-scheme: dark; }
+.ov-slot-picker { display: grid; gap: 15px; padding: 18px; background: #ffffff03; border: 1px solid #ffffff15; border-radius: 8px; }
+.ov-slot-heading { display: flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 1px; color: var(--ov-accent); }
+.ov-slot-picker .ov-fine-print { margin: 0; }
+.ov-slot-picker .ov-text-button { display: inline-flex; align-items: center; gap: 5px; padding: 10px 0 0; }
+.ov-form label.ov-consent { display: flex; align-items: flex-start; gap: 11px; color: #c2c7b7; font-size: 11px; font-weight: 400; line-height: 1.7; }
+.ov-form .ov-consent input[type=checkbox] { flex: 0 0 17px; width: 17px; height: 17px; min-height: 17px; margin: 2px 0 0; padding: 0; accent-color: var(--ov-accent); cursor: pointer; }
+.ov-form label.ov-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.ov-primary:disabled { cursor: wait; opacity: .6; transform: none; }
+.ov-form-fields:disabled { opacity: .7; }
+.ov-reference { color: var(--ov-accent); overflow-wrap: anywhere; font-size: 12px; }
+.ov-enquiry__success > .ov-enquiry__notice { margin: 18px 0 0; }
+.ov-enquiry__success > .ov-form__error { margin-top: 16px; }
+.ov-checkout-panel { margin-top: 24px; padding: 21px; border: 1px solid #d6ff5f35; border-radius: 9px; background: #d6ff5f06; }
+.ov-checkout-panel > svg { color: var(--ov-accent); }
+.ov-checkout-panel h4 { font-family: var(--font-display, inherit); font-size: 22px; margin: 13px 0 10px; font-weight: 500; letter-spacing: -.4px; }
+.ov-checkout-panel p { color: var(--ov-muted); font-size: 12px; line-height: 1.8; margin: 0 0 20px; }
+.ov-checkout-panel button { width: 100%; }
+.payment-page { --ov-bg: #11120f; --ov-panel: #1a1c17; --ov-text: #f4f4eb; --ov-muted: #a5a89d; --ov-accent: #d6ff5f; min-height: 100dvh; padding: 0 clamp(20px, 5vw, 76px) 32px; background: radial-gradient(ellipse at 100% 0%, #3b472535, transparent 45%), #11120f; color: var(--ov-text); }
+.payment-page__header { display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1250px; margin: auto; padding: 28px 0; border-bottom: 1px solid #ffffff15; }
+.payment-wordmark { display: inline-flex; align-items: center; gap: 10px; color: var(--ov-accent); font-family: var(--font-display, sans-serif); font-weight: 700; font-size: 45px; font-style: italic; line-height: 1; text-decoration: none; }
+.payment-wordmark span { display: grid; gap: 4px; color: var(--ov-text); font-size: 19px; font-style: normal; letter-spacing: 1px; }
+.payment-wordmark small { font-family: var(--font-body, sans-serif); font-weight: 400; font-size: 8px; letter-spacing: 4px; }
+.payment-back { display: inline-flex; align-items: center; gap: 9px; color: var(--ov-muted); font-size: 12px; text-decoration: none; }
+.payment-back:hover { color: var(--ov-accent); }
+.payment-card { width: min(670px, 100%); margin: clamp(40px, 7vw, 90px) auto 50px; }
+.payment-icon { display: grid; place-items: center; width: 62px; height: 62px; margin-bottom: 24px; color: var(--ov-accent); border: 1px solid #d6ff5f45; border-radius: 50%; background: #d6ff5f0a; }
+.payment-card h1 { font-family: var(--font-display, sans-serif); font-size: clamp(36px, 5.4vw, 58px); font-weight: 500; line-height: 1.08; letter-spacing: -1.5px; margin: 15px 0 22px; }
+.payment-description { max-width: 590px; color: var(--ov-muted); font-size: 14px; line-height: 1.9; margin: 0 0 25px; }
+.payment-summary { margin: 28px 0; border: 1px solid #ffffff18; border-radius: 12px; padding: 7px 22px; background: #ffffff03; }
+.payment-summary > div { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 17px 0; }
+.payment-summary > div + div { border-top: 1px solid #ffffff12; }
+.payment-summary dt { color: var(--ov-muted); font-size: 12px; flex-shrink: 0; }
+.payment-summary dd { margin: 0; font-size: 13px; text-align: right; }
+.payment-summary > div:first-child dd { color: var(--ov-accent); font-size: 24px; font-family: var(--font-display, sans-serif); }
+.payment-reference { overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.payment-reference--standalone { padding: 15px 17px; border: 1px solid #ffffff18; border-radius: 7px; color: var(--ov-muted); font-size: 11px; }
+.payment-server-message { color: #c9d2b4; font-size: 13px; line-height: 1.7; margin: 0 0 22px; }
+.payment-checking { display: flex; align-items: center; gap: 10px; font-size: 12px; color: #c5ccaf; line-height: 1.7; margin: 19px 0; }
+.payment-checking span { display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--ov-accent); flex-shrink: 0; box-shadow: 0 0 0 4px #d6ff5f15; }
+.payment-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 27px; }
+.payment-actions button { font-family: inherit; cursor: pointer; }
+.payment-actions button:disabled { cursor: wait; }
+.payment-actions a:focus-visible, .payment-actions button:focus-visible, .payment-page__header a:focus-visible { outline: 2px solid var(--ov-accent); outline-offset: 4px; }
+.payment-trust { display: flex; align-items: flex-start; gap: 10px; color: var(--ov-muted); font-size: 11px; line-height: 1.8; margin-top: 25px; }
+.payment-trust svg { flex-shrink: 0; margin-top: 2px; color: #b4c28e; }
+.payment-page__footer { max-width: 1250px; margin: 0 auto; border-top: 1px solid #ffffff13; padding-top: 25px; display: flex; align-items: center; justify-content: center; gap: 10px; color: #7e8574; font-size: 10px; line-height: 1.8; }
+.payment-page__footer svg { flex-shrink: 0; }
+@media (max-width: 600px) {
+  .vehicle-stock-row { font-size: 8px; letter-spacing: .65px; }
+  .ov-slot-picker { padding: 15px; }
+  .ov-checkout-panel { padding: 18px; }
+  .payment-page__header { padding: 22px 0; }
+  .payment-back { width: 114px; font-size: 10px; line-height: 1.5; }
+  .payment-back svg { flex-shrink: 0; }
+  .payment-wordmark { font-size: 35px; gap: 8px; }
+  .payment-wordmark span { font-size: 15px; }
+  .payment-wordmark small { font-size: 6px; letter-spacing: 3px; }
+  .payment-card { margin-top: 40px; }
+  .payment-card h1 { font-size: 38px; letter-spacing: -.9px; }
+  .payment-summary { padding: 4px 16px; }
+  .payment-summary > div { gap: 16px; }
+  .payment-summary dt { font-size: 11px; }
+  .payment-summary dd { font-size: 11px; }
+  .payment-actions { flex-direction: column; }
+  .payment-actions > * { width: 100%; }
+  .payment-page__footer { align-items: flex-start; font-size: 9px; justify-content: flex-start; }
+}
+.match-inventory-count { display: block; margin-top: 8px; color: #b7c48c; font-size: 9px; line-height: 1.6; }
