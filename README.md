@@ -8,7 +8,8 @@ An interactive car showroom with a persistent dealership backend, built with Rea
 
 ## What works
 
-- Cinematic showroom, searchable vehicle collection, brand/body/powertrain/budget filters, saved favourites, and comparisons of up to three cars.
+- Cinematic showroom with two complete colour palettes, a persistent light/dark switch, responsive discovery choices, searchable inventory, brand/body/powertrain/budget filters, saved favourites, and comparisons of up to three cars.
+- Interactive vehicle cards with visible details and enquiry actions, subtle photo and hover motion, clear focus states, and reduced-motion support. Theme preference is applied before paint and respects the browser’s preference until a visitor makes their own choice.
 - Interactive concept-car driving scene with play/pause, adjustable pace, day/night lighting and reduced-motion support.
 - Vehicle records with actual stock statuses, condition, colour, price, mileage, specifications, features and image galleries.
 - Protected **`/admin` dealership workspace** with inventory editing, photo uploads, enquiry management, staff notes, test-drive slots, appointment confirmation and dealership settings.

@@ -286,3 +286,86 @@
   .payment-page__footer { align-items: flex-start; font-size: 9px; justify-content: flex-start; }
 }
 .match-inventory-count { display: block; margin-top: 8px; color: #b7c48c; font-size: 9px; line-height: 1.6; }
+
+/* Dialogs, forms and receipts follow the same semantic theme as the showroom. */
+.velocity-modal,
+.payment-page {
+  --ov-bg: var(--surface-elevated, #172125);
+  --ov-panel: var(--surface-muted, #1c2a2e);
+  --ov-text: var(--text-primary, #f3f5ef);
+  --ov-muted: var(--text-secondary, #b9c8c8);
+  --ov-accent: var(--accent, #d1f878);
+  color: var(--ov-text);
+  color-scheme: inherit;
+}
+.velocity-modal { border-color: var(--border-strong); background: var(--ov-bg); box-shadow: 0 32px 120px #071c1a66; scrollbar-color: var(--border-strong) var(--ov-bg); }
+.velocity-modal::backdrop { background: #061017bf; backdrop-filter: blur(10px); }
+.velocity-modal__header { color: var(--ov-text); background: var(--surface-floating); border-color: var(--border-default); }
+.velocity-modal button:focus-visible, .velocity-modal input:focus-visible, .velocity-modal select:focus-visible, .velocity-modal textarea:focus-visible, .ov-compare__scroll:focus-visible { outline-color: var(--focus-ring); }
+.ov-eyebrow { color: var(--text-muted); }
+.ov-icon-button { color: var(--ov-text); border-color: var(--border-strong); background: var(--surface-inset); }
+.ov-icon-button:hover, .ov-icon-button.is-active { color: var(--accent); background: var(--accent-soft); border-color: var(--accent-border); }
+.ov-primary { color: var(--accent-contrast); background: var(--accent); box-shadow: 0 4px 15px #00000008; }
+.ov-primary:hover { color: var(--accent-contrast); background: var(--accent-hover); }
+.ov-secondary { color: var(--ov-text); border-color: var(--border-strong); }
+.ov-secondary:hover, .ov-secondary[aria-pressed=true] { color: var(--accent); background: var(--accent-soft); border-color: var(--accent-border); }
+.ov-secondary:disabled { color: var(--text-muted); border-color: var(--border-default); opacity: .6; }
+.ov-text-button { color: var(--accent); }
+.ov-gallery { background: var(--surface-inset); }
+.ov-gallery-note { background: var(--surface-inset); border-color: var(--border-default); color: var(--text-secondary); }
+.ov-gallery .ov-icon-button, .ov-compare__remove { background: #0e1a20d9; color: #f4f8ef; border-color: #d4e8de66; }
+.ov-gallery .ov-icon-button:hover, .ov-gallery .ov-icon-button.is-active, .ov-compare__remove:hover { background: #d1f878; color: #17220b; border-color: #d1f878; }
+.ov-gallery__arrows > span { color: #fff; text-shadow: 0 1px 5px #000; }
+.ov-thumbnails { gap: 10px; background: var(--surface-inset); border-bottom: 1px solid var(--border-default); }
+.ov-thumbnails button { border-color: var(--border-strong); opacity: .65; }
+.ov-thumbnails button.is-active { border-color: var(--accent); box-shadow: 0 0 0 2px var(--surface-inset),0 0 0 3px var(--accent-border); }
+.ov-color i { border-color: var(--border-strong); }
+.ov-performance { border-color: var(--border-default); }
+.ov-features li { color: var(--text-secondary); }
+.ov-demo-notice { border-color: var(--border-default); background: var(--surface-inset); }
+.ov-finance { border-color: var(--border-default); background: var(--surface-inset); }
+.ov-finance__controls select, .ov-finance__controls input { color-scheme: inherit; background: var(--surface-elevated); color: var(--text-primary); border-color: var(--border-strong); }
+.ov-finance__breakdown { border-color: var(--border-default); }
+.ov-compare__scroll { scrollbar-color: var(--border-strong) var(--ov-bg); }
+.ov-compare tbody tr { border-color: var(--border-default); }
+.ov-compare tbody tr:first-child { background: var(--accent-soft); }
+.ov-compare__car > img { border: 1px solid var(--border-default); }
+.ov-enquiry__car { border-color: var(--border-default); }
+.ov-enquiry__car img { border: 1px solid var(--border-default); }
+.ov-enquiry__notice { color: var(--text-secondary); background: var(--accent-soft); border-color: var(--accent-border); }
+.ov-form input:not([type=radio]), .ov-form textarea, .ov-form select { color-scheme: inherit; color: var(--text-primary); background: var(--surface-inset); border-color: var(--border-strong); transition: border-color .18s,box-shadow .18s; }
+.ov-form input:not([type=radio]):hover, .ov-form textarea:hover, .ov-form select:hover { border-color: var(--accent-border); }
+.ov-form input::placeholder, .ov-form textarea::placeholder { color: var(--text-muted); }
+.ov-request-types label { border-color: var(--border-strong); }
+.ov-request-types label.is-selected { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.ov-form__error { color: var(--danger); border-color: color-mix(in srgb,var(--danger) 35%,var(--border-default)); background: var(--danger-soft); }
+.ov-success-icon { color: var(--accent); border-color: var(--accent-border); background: var(--accent-soft); }
+.ov-draft { color: var(--text-secondary); background: var(--surface-inset); border-color: var(--border-default); }
+.vehicle-stock-row { color: var(--text-muted); }
+.vehicle-stock-status, .ov-stock-line .vehicle-stock-status { color: var(--success); background: var(--success-soft); border-color: color-mix(in srgb,var(--success) 30%,var(--border-default)); }
+.vehicle-stock-status--reserved, .ov-stock-line .vehicle-stock-status--reserved { color: var(--warning); background: var(--warning-soft); border-color: color-mix(in srgb,var(--warning) 30%,var(--border-default)); }
+.vehicle-stock-status--sold, .ov-stock-line .vehicle-stock-status--sold { color: var(--text-muted); background: var(--surface-muted); border-color: var(--border-default); }
+.ov-demo-tag { color: var(--warning); }
+.inventory-state { background: var(--surface-elevated); color: var(--text-primary); border-color: var(--border-default); box-shadow: var(--card-shadow); }
+.inventory-state p { color: var(--text-secondary); }
+.inventory-loading-dot { border-color: var(--accent); background: var(--accent-soft); box-shadow: 0 0 0 8px var(--accent-soft); }
+.inventory-refresh-error { color: var(--warning); background: var(--warning-soft); border-color: color-mix(in srgb,var(--warning) 30%,var(--border-default)); }
+.ov-slot-picker { background: var(--surface-inset); border-color: var(--border-default); }
+.ov-form label.ov-consent { color: var(--text-secondary); }
+.ov-checkout-panel { border-color: var(--accent-border); background: var(--accent-soft); }
+.payment-page { background: var(--surface-page); }
+.payment-page__header, .payment-page__footer { border-color: var(--border-default); }
+.payment-card { padding: 34px; background: var(--surface-elevated); border: 1px solid var(--border-default); border-radius: 13px; box-shadow: var(--card-shadow); }
+.payment-icon { color: var(--accent); background: var(--accent-soft); border-color: var(--accent-border); }
+.payment-summary { background: var(--surface-inset); border-color: var(--border-default); }
+.payment-summary > div + div { border-color: var(--border-default); }
+.payment-reference--standalone { background: var(--surface-inset); border-color: var(--border-default); }
+.payment-server-message, .payment-checking { color: var(--text-secondary); }
+.payment-checking span { box-shadow: 0 0 0 4px var(--accent-soft); }
+.payment-trust svg { color: var(--accent-secondary); }
+.payment-page__footer { color: var(--text-muted); }
+.match-inventory-count { color: var(--accent-secondary); }
+@media (max-width: 600px) {
+  .payment-card { padding: 25px 20px; border-radius: 10px; margin: 30px auto; }
+  .payment-card h1 { font-size: 35px; }
+}
